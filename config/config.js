@@ -1,3 +1,3 @@
-const backendAddr = 'api.leftstat.ru'
+const backendAddr = 'https://api.leftstat.ru'
 
 export default backendAddr
