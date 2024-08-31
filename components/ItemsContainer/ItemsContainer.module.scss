@@ -1,0 +1,56 @@
+.container{
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  a{
+    text-decoration: none;
+  }
+}
+
+.Item{
+  width: 20%;
+  height: 33vh;
+  background-color: #324552;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  text-align: center;
+  .ItemImg{
+    width: 95%;
+    min-height: auto;
+  }
+  .ItemTitle{
+    width: 95%;
+    height: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #224170;
+
+    font-family: 'Gt Eesti Pro Display Medium', sans-serif;
+    font-size: 1vw;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .ItemName{
+    width: 95%;
+    height: 15%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: 'Gt Eesti Pro Display Medium', sans-serif;
+    font-size: 1.5vw;
+    color: white;
+  }
+}

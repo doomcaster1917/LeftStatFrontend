@@ -1,0 +1,33 @@
+.wrapper{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.navbar{
+    width: 200px;
+    border: 2px solid #ccc;
+    min-height: 97vh;
+    li{
+      background-color: #e8e8e8;
+      min-height: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid #ccc;
+      a{
+        text-decoration: none;
+        color: #417690;
+        text-align: center;
+        margin-right: 10px;
+      }
+    }
+}
+
+.items_wrapper{
+  width: 85%;
+  padding: 30px;
+  background-color: #e8e8e8;
+}
+

@@ -1,0 +1,11 @@
+.charts_area{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: 1px solid black;
+  iframe{
+    width: 55vw;
+    height: 60vh;
+  }
+}

@@ -1,0 +1,54 @@
+.main_container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  row-gap: 50px;
+}
+
+.dataset_view{
+  width: 100%;
+  min-height: 15vh;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.dataset_edit{
+  width: 100%;
+  min-height: 25vh;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.form{
+  width: 100%;
+  height: 400px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+
+  align-items: center;
+
+  textarea {
+    background-color: white;
+    text-wrap: wrap;
+    height: 100px;
+    width: 95%;
+  }
+
+  button{
+    //background-color: #417690;
+    //border-radius: 30px;
+    width: 250px;
+    height: 80px;
+    margin-top: 20px;
+    //border: none;
+  }
+}

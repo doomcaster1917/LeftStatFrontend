@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    /*background: rgb(255,0,0);*/
+    /*background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 65%, rgba(255,255,255,1) 100%);*/
+    background: #F1F1F1;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@font-face {
+    font-family: 'Gt Eesti Pro Display UltraBold';
+    src: url("../static/fonts/gt eesti pro display/gteestiprodisplay_ultrabold.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gt Eesti Pro Display Medium';
+    src: url("../static/fonts/gt eesti pro display/gteestiprodisplay_medium.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
