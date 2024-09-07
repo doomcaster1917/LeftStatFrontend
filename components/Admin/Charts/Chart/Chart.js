@@ -11,6 +11,7 @@ const Chart = ({children, ...pageProps}) => {
     const [name, setName] = useState(children.Name)
     const [title, setTitle] = useState(children.Title)
     const [description, setDescription] = useState(children.Description)
+    const [order, setOrder] = useState(children.Order)
 
     async function handleSubmit(e){
         e.preventDefault()
@@ -41,7 +42,7 @@ const Chart = ({children, ...pageProps}) => {
     async function handleUpdateChartSubmit(e){
         e.preventDefault();
         await $api.patch(`${backendAddr}/terms/update_chart`,
-            {name: name, title: title, description: description, chart_id: pageProps.id}, {
+            {name: name, order: order, title: title, description: description, chart_id: pageProps.id}, {
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 withCredentials: true
             })
@@ -76,6 +77,10 @@ const Chart = ({children, ...pageProps}) => {
                             setDescription(e.target.value)
                         }}
                                   value={description}/>
+                        <input placeholder={"Порядковый номер"} onChange={(e) => {
+                            setOrder(e.target.value)
+                        }}
+                             value={order} type="text"/>
                         <button type="submit">Сохранить</button>
                     </form>
                 </div>
