@@ -7,7 +7,6 @@ import backendAddr from "../../../../config/config";
 
 const Chart = ({children, ...pageProps}) => {
 
-    const [axis, setAxis] = useState(0)
     const [name, setName] = useState(children.Name)
     const [title, setTitle] = useState(children.Title)
     const [description, setDescription] = useState(children.Description)
@@ -23,6 +22,12 @@ const Chart = ({children, ...pageProps}) => {
             arr.push(data[i][1]);
         }
 
+        await $api.patch(`${backendAddr}/terms/set_axis`,
+            {dataset_id: 0, chart_id: pageProps.id}, {
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                withCredentials: true
+            })
+
         await $api.patch(`${backendAddr}/terms/select_datasets`,
             {selected_datasets: `[${arr.join(',')}]`, id: pageProps.id}, {
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -32,8 +37,12 @@ const Chart = ({children, ...pageProps}) => {
 
     async function handleSubmitAxis(e){
         e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const data = [...formData.entries()];
+        const axis_id = data[0][1]
         await $api.patch(`${backendAddr}/terms/set_axis`,
-            {dataset_id: axis, chart_id: pageProps.id}, {
+            {dataset_id: axis_id, chart_id: pageProps.id}, {
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 withCredentials: true
             })
@@ -99,9 +108,7 @@ const Chart = ({children, ...pageProps}) => {
                 </div>
                 <div className={styles.chart_edit}>
                     <form className={styles.select_form} action=""
-                          onChange={(e) => {
-                              setAxis(e.target.value)
-                          }} onSubmit={handleSubmitAxis}>
+                          onSubmit={handleSubmitAxis}>
                         <label htmlFor="Form">Выбор оси-X главного графика</label>
                         <select name="setAxis">
                             {children?.DataSets?.map((item) => (
