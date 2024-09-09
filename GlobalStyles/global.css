@@ -11,7 +11,8 @@ html {
 body{
     /*background: rgb(255,0,0);*/
     /*background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 65%, rgba(255,255,255,1) 100%);*/
-    background: #F1F1F1;
+    /*background: #F1F1F1;*/
+    background: white;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -26,6 +27,27 @@ body{
 @font-face {
     font-family: 'Gt Eesti Pro Display Medium';
     src: url("../static/fonts/gt eesti pro display/gteestiprodisplay_medium.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gt Eesti Pro Display Regular';
+    src: url("../static/fonts/gt eesti pro display/gteestiprodisplay_regular.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gt Eesti Pro Display Light';
+    src: url("../static/fonts/gt eesti pro display/gteestiprodisplay_light.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gt Eesti Pro Display Thin';
+    src: url("../static/fonts/gt eesti pro display/gteestiprodisplay_thin.otf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }

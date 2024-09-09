@@ -1,11 +1,39 @@
+.main_wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    font-family: 'Gt Eesti Pro Display Medium', sans-serif;
+    color: #373737;
+    width: 80%;
+    text-align: center;
+  }
+  h2{
+    font-family: 'Gt Eesti Pro Display Regular', sans-serif;
+    color: #373737;
+    width: 65%;
+    text-align: center;
+    font-size: 20px;
+
+    margin-top: 50px;
+  }
+}
+
 .charts_area{
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
-  border: 1px solid black;
+  align-items: center;
   iframe{
-    width: 55vw;
-    height: 60vh;
+    width: 1000px;
+    height: 550px;
+  }
+  p{
+    font-family: 'Gt Eesti Pro Display Light', sans-serif;
+    width: 85%;
+    font-size: 20px;
+    white-space: pre-wrap;
+    margin-bottom: 50px;
   }
 }
