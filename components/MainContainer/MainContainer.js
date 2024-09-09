@@ -2,6 +2,8 @@ import A from "../UIKit/A/A";
 import Head from "next/head";
 import styles from "./MainContainer.module.scss"
 import Link from "next/link";
+import React, {Suspense} from "react";
+import {Metrica} from "../Scripts/YaMetrica";
 
 const MainContainer = ({children, title, description, keywords}) => {
     return (
@@ -12,6 +14,9 @@ const MainContainer = ({children, title, description, keywords}) => {
                 <meta name={"keywords"} content={keywords}/>
                 <link rel="icon" type="image/x-icon" href="../static/images/logo120.svg"/>
             </Head>
+            <Suspense>
+                <Metrica/>
+            </Suspense>
             <div className={styles.header}>
                 <div className={styles.header_container}>
                     <div className={styles.navbar}>
