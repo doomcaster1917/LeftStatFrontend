@@ -8,10 +8,10 @@ const View = ({children}) => {
             <h2>{children.Description}</h2>
             <div className={styles.charts_area}>
                 {children.BoundedCharts.map((chart, index) => (
-                    <>
-                        <iframe key={index} srcDoc={chart.HtmlChart} frameBorder="0"></iframe>
+                    <div key={index}>
+                        <iframe  srcDoc={chart.HtmlChart} frameBorder="0"></iframe>
                         <p>{chart.Description}</p>
-                    </>
+                    </div>
                 ))}
             </div>
         </div>

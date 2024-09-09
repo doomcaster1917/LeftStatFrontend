@@ -6,10 +6,10 @@ import CentralBody from "../../components/CentralBody/CentralBody";
 import View from "../../components/View/View";
 
 const ViewPage = ({Data}) => {
-    console.log(Data)
+
     return (
         <>
-            <MainContainer>
+            <MainContainer title={Data.Name}>
                 <CentralBody>
                     <View>{Data}</View>
                 </CentralBody>
