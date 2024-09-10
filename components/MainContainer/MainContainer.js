@@ -21,7 +21,7 @@ const MainContainer = ({children, title, description, keywords}) => {
             <div className={styles.header}>
                 <div className={styles.header_container}>
                     <div className={styles.navbar}>
-                        <A href={'/aboutProject'} text={"О проекте"}/>
+                        {/*<A href={'/aboutProject'} text={"О проекте"}/>*/}
                     </div>
                     <div className={styles.subheader}>
                         <div className={styles.subheader_container}>
