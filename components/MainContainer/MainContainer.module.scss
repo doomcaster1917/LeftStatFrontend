@@ -10,15 +10,15 @@
 }
 
 .header{
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 4%, rgba(217,5,5,1) 74%);
+  background: #FF0000; //rgb(255,255,255);
+  //background: //linear-gradient(180deg, rgba(255,255,255,1) 4%, rgba(217,5,5,1) 74%);
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  background-color: #324552;
+  //background-color: #324552;
   overflow: hidden;
 }
 
@@ -33,7 +33,7 @@
   }
   .subheader_container{
     width: 1274px;
-    height: 200px;
+    height: 170px;
     font-family: "GT Eesti Pro Display Ultrabold", monospace;
     font-size: 35px;
     color: white;
