@@ -7,7 +7,8 @@ import axios from "axios";
 const Index = ({views}) => {
     return (
         <>
-            <MainContainer>
+            <MainContainer title={"Аналитика российской и мировой статистики"} description={"Анализ российской и мировой статистики" +
+                "с левым уклоном"} keywords={"статистика, по годам, рост цен по годам, экономика России по годам"}>
                     <CentralBody>
                     <ItemsContainer>{views}</ItemsContainer>
                     </CentralBody>
