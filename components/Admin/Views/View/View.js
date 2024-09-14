@@ -6,6 +6,7 @@ import backendAddr from "/config/config"
 const View = ({children, ...pageProps}) => {
     const genData = children.general_data
     const [name, setName] = useState(genData?.Name);
+    const [slug, setSlug] = useState(genData?.Slug);
     const [title, setTitle] = useState(genData?.Title);
     const [description, setDescription] = useState(genData?.Description);
     const [seoDescription, setSeoDescription] = useState(genData?.SeoDescription);
@@ -18,6 +19,7 @@ const View = ({children, ...pageProps}) => {
             {
                 name: name,
                 title: title,
+                slug: slug,
                 seoDescription: seoDescription,
                 seoKeywords: seoKeywords,
                 description: description,
@@ -89,6 +91,14 @@ const View = ({children, ...pageProps}) => {
                             setName(e.target.value);
                         }}
                         value={name}
+                    />
+                    <label htmlFor="slug">Slug:</label>
+                    <textarea
+                        id="slug"
+                        onChange={(e) => {
+                            setSlug(e.target.value);
+                        }}
+                        value={slug}
                     />
                     <label htmlFor="Title">Краткое описание:</label>
                     <textarea
