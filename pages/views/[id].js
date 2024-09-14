@@ -9,7 +9,7 @@ const ViewPage = ({Data}) => {
 
     return (
         <>
-            <MainContainer title={Data.Name}>
+            <MainContainer title={Data.Name} description={Data.SeoDescription}>
                 <CentralBody>
                     <View>{Data}</View>
                 </CentralBody>
