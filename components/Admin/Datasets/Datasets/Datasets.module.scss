@@ -1,12 +1,11 @@
 .main_container{
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  border: 1px solid black;
 }
 
 .item{
