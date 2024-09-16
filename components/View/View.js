@@ -10,7 +10,10 @@ const View = ({children}) => {
                 {children.BoundedCharts.map((chart, index) => (
                     <div key={index}>
                         <iframe  srcDoc={chart.HtmlChart} frameBorder="0"></iframe>
-                        <p>{chart.Description}</p>
+                        <p>{chart.Description}
+                            {/*<hr/>*/}
+                        </p>
+
                     </div>
                 ))}
             </div>
