@@ -12,7 +12,7 @@ const MainContainer = ({children, title, description, keywords}) => {
                 <title>{title}</title>
                 <meta name={"description"} content={description}/>
                 <meta name={"keywords"} content={keywords}/>
-                <link rel="icon" type="image/x-icon" href="../static/images/logo120.svg"/>
+                <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico"/>
                 <meta name="yandex-verification" content="fd324c95d81fb05d"/>
             </Head>
             <Suspense>
