@@ -11,7 +11,6 @@ const View = ({children, ...pageProps}) => {
     const [description, setDescription] = useState(genData?.Description);
     const [seoDescription, setSeoDescription] = useState(genData?.SeoDescription);
     const [seoKeywords, setSeoKeywords] = useState(genData?.SeoKeywords);
-    const [mainChartId, setMainChartId] = useState(children?.general_data?.BoundedCharts[0].Id||1);
 
     async function HandleDataSubmit(e) {
         e.preventDefault();
@@ -49,9 +48,11 @@ const View = ({children, ...pageProps}) => {
 
     async function handleMainChartIdSubmit(e){
         e.preventDefault();
-        if(mainChartId === 0){
-            alert("Please select a chart");
-        }
+        const form = e.target;
+        const formData = new FormData(form);
+        const data = [...formData.entries()];
+        const mainChartId = data[0][1]
+
         await $api.patch(`/terms/views/set_main_chart`,
             {main_chart_id: mainChartId, view_id: pageProps.id}, {
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -148,10 +149,7 @@ const View = ({children, ...pageProps}) => {
 
             </div>
             <div className={styles.view_edit}>
-                <form className={styles.select_form} action=""
-                      onChange={(e) => {
-                          setMainChartId(e.target.value)
-                      }} onSubmit={handleMainChartIdSubmit}>
+                <form className={styles.select_form} action="" onSubmit={handleMainChartIdSubmit}>
                     <label htmlFor="Form">Выбор главного графика</label>
                     <select name="setAxis">
                         {children?.general_data?.BoundedCharts?.map((item, index) => (
