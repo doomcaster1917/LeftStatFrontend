@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import styles from './View.module.scss';
 import $api from "../../../../api/axios";
 import backendAddr from "/config/config"
+import axios from "axios";
+
 
 const View = ({children, ...pageProps}) => {
     const genData = children.general_data
@@ -11,6 +13,7 @@ const View = ({children, ...pageProps}) => {
     const [description, setDescription] = useState(genData?.Description);
     const [seoDescription, setSeoDescription] = useState(genData?.SeoDescription);
     const [seoKeywords, setSeoKeywords] = useState(genData?.SeoKeywords);
+    const [file, setFile] = useState(null);
 
     async function HandleDataSubmit(e) {
         e.preventDefault();
@@ -46,6 +49,7 @@ const View = ({children, ...pageProps}) => {
             })
     }
 
+
     async function handleMainChartIdSubmit(e){
         e.preventDefault();
         const form = e.target;
@@ -79,6 +83,21 @@ const View = ({children, ...pageProps}) => {
                 },
                 withCredentials: true
             })
+    }
+
+    async function handleDownloadImageSubmit(e){
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+
+        if (!file){
+            alert("Выберите файл")
+        } else {
+            await axios.post(`${backendAddr}/terms/views/download_img`,
+                formData, {
+                    headers: {'Content-Type': 'multipart/form-data'},
+                })
+        }
     }
 
     return (
@@ -161,8 +180,13 @@ const View = ({children, ...pageProps}) => {
             </div>
             <button onClick={deleteView}>Удалить</button>
             <button onClick={createImg}>Создать изображение</button>
+            <form onSubmit={handleDownloadImageSubmit}>
+                <input type="file" name={pageProps.id} onChange={e => setFile(e.target.value)}/>
+                <input type="text" name={"token"} value={localStorage.getItem('authorization')} hidden={true}/>
+                <input type="submit"/>
+            </form>
         </div>
-    );
+);
 };
 
 export default View;

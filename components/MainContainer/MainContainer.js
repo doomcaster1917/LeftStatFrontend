@@ -1,4 +1,3 @@
-import A from "../UIKit/A/A";
 import Head from "next/head";
 import styles from "./MainContainer.module.scss"
 import Link from "next/link";
@@ -12,7 +11,7 @@ const MainContainer = ({children, title, description, keywords}) => {
                 <title>{title}</title>
                 <meta name={"description"} content={description}/>
                 <meta name={"keywords"} content={keywords}/>
-                <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+                <link rel="icon" type="image/svg+xml" href="https://leftstat.ru/favicon.svg"/>
                 <meta name="yandex-verification" content="fd324c95d81fb05d"/>
             </Head>
             <Suspense>
