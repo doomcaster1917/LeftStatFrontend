@@ -6,7 +6,7 @@ const View = ({children}) => {
     return (
         <div className={styles.main_wrapper}>
             <h1>{children.Title}</h1>
-            <h2>{children.Description}</h2>
+            <p>{children.Description}</p>
             <div className={styles.charts_area}>
                 {children.BoundedCharts.map((chart, index) => (
                     <div key={index}>

@@ -1,10 +1,12 @@
 .container{
   width: 90%;
-  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 20px;
   a{
     text-decoration: none;
   }
@@ -12,7 +14,7 @@
 
 .Item{
   width: 24.5%;
-  height: 75%;
+  height: 400px;
   background-color: #324552;
 
   display: flex;
