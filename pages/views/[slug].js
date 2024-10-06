@@ -1,9 +1,6 @@
 import React from 'react';
 import backendAddr from "../../config/config";
 import axios from "axios";
-import MainContainer from "../../components/MainContainer/MainContainer";
-import CentralBody from "../../components/CentralBody/CentralBody";
-import ViewMB from "../../MobileComponents/ViewMB/ViewMB";
 import ViewWrapper from "../../components/ViewWrapper/ViewWrapper";
 
 const ViewPage = ({Data}) => {

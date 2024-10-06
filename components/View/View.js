@@ -4,7 +4,7 @@ import parse from 'html-react-parser';
 import EnchartBuilder from "../EchnartBuilder/EnchartBuilder";
 
 const View = ({children}) => {
-
+    console.log(children);
     return (
         <div className={styles.main_wrapper}>
             <h1>{children.Title}</h1>
@@ -16,7 +16,7 @@ const View = ({children}) => {
                         {/*<p>{chart.Description}*/}
                         {/*    /!*<hr/>*!/*/}
                         {/*</p>*/}
-                        {parse(`<p>${chart.Description}</p>`)}
+                        {parse(`<p>${chart.description}</p>`)}
                     </div>
                 ))}
             </div>
