@@ -1,12 +1,12 @@
 import React from 'react';
-import MainContainer from "../components/MainContainer/MainContainer";
+import MainContainerMB from "../MobileComponents/MainContainerMB/MainContainerMB";
 
 const Error = () => {
     return (
         <>
-            <MainContainer>
+            <MainContainerMB>
                 <img src="../static/images/errors/error_404_page.jpg" alt="" width={"100%"}/>
-            </MainContainer>
+            </MainContainerMB>
         </>
     );
 };

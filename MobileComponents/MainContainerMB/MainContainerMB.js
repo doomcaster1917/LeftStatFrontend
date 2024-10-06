@@ -1,11 +1,10 @@
 import Head from "next/head";
-import styles from "./MainContainer.module.scss"
+import styles from "./MainContainerMB.module.scss"
 import Link from "next/link";
 import React, {Suspense} from "react";
 import {Metrica} from "../../components/Scripts/YaMetrica";
 
-const MainContainer = ({children, title, description, keywords}) => {
-
+const MainContainerMB = ({children, title, description, keywords}) => {
     return (
         <>
             <Head>
@@ -26,7 +25,7 @@ const MainContainer = ({children, title, description, keywords}) => {
                     <div className={styles.subheader}>
                         <div className={styles.subheader_container}>
                             <Link href={'/'}><img src={'../static/images/main_size_logo.png'} className={styles.logo}></img></Link>
-                            <h1> Объясняем на графиках, а не на пальцах </h1>
+                            <h1> Объясняем на графиках </h1>
                         </div>
                     </div>
                 </div>
@@ -39,4 +38,4 @@ const MainContainer = ({children, title, description, keywords}) => {
     );
 };
 
-export default MainContainer;
+export default MainContainerMB;

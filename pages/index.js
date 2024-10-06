@@ -1,19 +1,10 @@
-import MainContainer from "../components/MainContainer/MainContainer";
-import ItemsContainer from "../components/ItemsContainer/ItemsContainer";
-import CentralBody from "../components/CentralBody/CentralBody";
 import backendAddr from "../config/config"
 import axios from "axios";
+import LayOut from "../components/LayOut/LayOut";
 
 const Index = ({views}) => {
     return (
-        <>
-            <MainContainer title={"Аналитика российской и мировой статистики"} description={"Анализ российской и мировой статистики " +
-                "с левым уклоном"} keywords={"статистика, по годам, рост цен по годам, экономика России по годам"}>
-                    <CentralBody>
-                    <ItemsContainer>{views}</ItemsContainer>
-                    </CentralBody>
-            </MainContainer>
-        </>
+        <LayOut>{views}</LayOut>
     );
 };
 

@@ -51,6 +51,7 @@ body{
 
 @media screen and (orientation: portrait) {
     html{
-        width: 1290px;
+        width: 100vw;
+        overflow-x: hidden;
     }
 }
