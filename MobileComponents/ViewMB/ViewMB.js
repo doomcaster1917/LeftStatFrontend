@@ -11,7 +11,7 @@ const ViewMB = ({children}) => {
             <div className={styles.charts_area}>
                 {children.BoundedCharts?.map((chart, index) => (
                     <div key={index}>
-                         <EnchartBuilder title={{text: '', subtext: chart.name}} width={'86vw'} height={'50vh'}>{chart}</EnchartBuilder>
+                         <EnchartBuilder title={{text: '', subtext: chart.name}} width={'86vw'} height={'40vh'}>{chart}</EnchartBuilder>
                         {/*<p>{chart.Description}*/}
                         {/*    /!*<hr/>*!/*/}
                         {/*</p>*/}

@@ -26,8 +26,20 @@ const EnchartBuilder = ({children, ...pageProps}) => {
             legend: {
                 data: legends
             },
+            toolbox: {
+                show: true,
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    dataView: { readOnly: false },
+                    magicType: { type: ['line', 'bar'] },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
             tooltip: {
-                trigger: 'item'
+                trigger: 'item',
             },
             xAxis: {
                 type: 'category',
