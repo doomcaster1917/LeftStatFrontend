@@ -12,7 +12,7 @@ const View = ({children}) => {
             <div className={styles.charts_area}>
                 {children.BoundedCharts.map((chart, index) => (
                     <div className={styles.charts_item} key={index}>
-                        <EnchartBuilder width={'56vw'} height={'50vh'}>{chart}</EnchartBuilder>
+                        <EnchartBuilder title={{text: chart.name, subtext: children.title}} width={'56vw'} height={'50vh'}>{chart}</EnchartBuilder>
                         {/*<p>{chart.Description}*/}
                         {/*    /!*<hr/>*!/*/}
                         {/*</p>*/}

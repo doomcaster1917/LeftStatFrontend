@@ -22,10 +22,7 @@ const EnchartBuilder = ({children, ...pageProps}) => {
 
     return (
         <ReactECharts option ={{
-            title: {
-                text: children.name,
-                subtext: children.title
-            },
+            title: pageProps.title,
             legend: {
                 data: legends
             },
