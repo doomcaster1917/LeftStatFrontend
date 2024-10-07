@@ -14,7 +14,7 @@
 
 .Item{
   width: 46.5%;
-  height: 32vh;
+  min-height: 32vh;
   background-color: #324552;
 
   display: flex;
@@ -26,8 +26,8 @@
 
   padding-bottom: 1vh;
   .ItemImg{
-    width: auto;
-    height: 14.5vh;
+    width: 90%;
+    height: auto;
     margin-top: 10px
   }
   .ItemTitle{
