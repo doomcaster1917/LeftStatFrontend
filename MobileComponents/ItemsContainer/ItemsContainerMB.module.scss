@@ -23,14 +23,16 @@
   align-items: center;
 
   text-align: center;
+
+  padding-bottom: 1vh;
   .ItemImg{
-    width: 95%;
-    min-height: auto;
+    width: auto;
+    height: 14.5vh;
     margin-top: 10px
   }
   .ItemTitle{
     width: 95%;
-    min-height: 40%;
+    min-height: 10vh;
 
     display: flex;
     flex-direction: column;

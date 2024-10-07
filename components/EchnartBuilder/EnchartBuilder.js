@@ -19,6 +19,24 @@ const EnchartBuilder = ({children, ...pageProps}) => {
         series.push({data: getValues(item.data), type: 'line', name: item.name});
     }
 
+    const tooltip = {
+        show: true,
+            feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            dataView: { readOnly: false },
+            magicType: { type: ['line', 'bar'] },
+            restore: {},
+            saveAsImage: {}
+        }
+    }
+
+    const mobileTooltip = {
+        show: true,
+        feature: {
+            magicType: { type: ['line', 'bar'] },
+        }}
 
     return (
         <ReactECharts option ={{
@@ -26,18 +44,7 @@ const EnchartBuilder = ({children, ...pageProps}) => {
             legend: {
                 data: legends
             },
-            toolbox: {
-                show: true,
-                feature: {
-                    dataZoom: {
-                        yAxisIndex: 'none'
-                    },
-                    dataView: { readOnly: false },
-                    magicType: { type: ['line', 'bar'] },
-                    restore: {},
-                    saveAsImage: {}
-                }
-            },
+            toolbox: pageProps.mobileTooltip?mobileTooltip:tooltip,
             tooltip: {
                 trigger: 'item',
             },
