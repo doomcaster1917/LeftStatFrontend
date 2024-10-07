@@ -1,6 +1,6 @@
 .navbar {
   height: 5vh;
-  width: 100%;
+  width: 100vw;
   background: #324552;
   text-decoration: none;
   display: flex;
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
   //background-color: #324552;
   overflow: hidden;

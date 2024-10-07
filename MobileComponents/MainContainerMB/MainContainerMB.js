@@ -13,6 +13,7 @@ const MainContainerMB = ({children, title, description, keywords}) => {
                 <meta name={"keywords"} content={keywords}/>
                 <link rel="icon" type="image/svg+xml" href="https://leftstat.ru/favicon.svg"/>
                 <meta name="yandex-verification" content="fd324c95d81fb05d"/>
+                <meta name="viewport" content="width=device-width, initial-scale=0.6"/>
             </Head>
             <Suspense>
                 <Metrica/>

@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react'
+import echarts from 'echarts'
+import styles from './EnchartBuilder.module.scss'
+import {useEffect} from 'react'
 
 const EnchartBuilder = ({children, ...pageProps}) => {
 
@@ -38,13 +41,26 @@ const EnchartBuilder = ({children, ...pageProps}) => {
             magicType: { type: ['line', 'bar'] },
         }}
 
+    //
+    // useEffect(() => {
+    //     var myChart = echarts.init(document.getElementById('main'));
+    //     window.addEventListener('resize', function() {
+    //         myChart.resize();
+    //     });
+    //     myChart?.resize({
+    //         width: 1800,
+    //         height: 400
+    //     });
+    // })
+
+
     return (
         <ReactECharts option ={{
             title: pageProps.title,
             legend: {
                 data: legends
             },
-            toolbox: pageProps.mobileTooltip?mobileTooltip:tooltip,
+            toolbox: pageProps.mobileTooltip?{}:tooltip,
             tooltip: {
                 trigger: 'item',
             },
@@ -58,8 +74,9 @@ const EnchartBuilder = ({children, ...pageProps}) => {
             series: series
         }}
                       style={{height: pageProps.height, width: pageProps.width}}
+
         ></ReactECharts>
     );
 };
-
+// {/*{{height: pageProps.height, width: pageProps.width}}*/}
 export default EnchartBuilder;
