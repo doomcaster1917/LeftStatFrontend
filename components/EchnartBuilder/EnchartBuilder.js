@@ -19,7 +19,7 @@ const EnchartBuilder = ({children, ...pageProps}) => {
 
     for (let item of children.datasets) {
         legends.push(item.name);
-        series.push({data: getValues(item.data), type: 'line', name: item.name});
+        series.push({data: getValues(item.data), type: pageProps.type, name: item.name});
     }
 
     const tooltip = {
