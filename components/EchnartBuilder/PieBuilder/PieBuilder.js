@@ -1,30 +1,29 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react'
-import echarts from 'echarts'
-import styles from './EnchartBuilder.module.scss'
-import {useEffect} from 'react'
 
-const EnchartBuilder = ({children, ...pageProps}) => {
+const LineBuilder = ({children, ...pageProps}) => {
 
     let legends = []
     let series = []
 
-    function getValues(obj){
+
+    function getObjValues(obj){
         let arr = []
         for(let key in obj){
-            arr.push(obj[key])
+            arr.push({name: key, value: obj[key]})
         }
         return arr
     }
 
     for (let item of children.datasets) {
         legends.push(item.name);
-        series.push({data: getValues(item.data), type: pageProps.type, name: item.name});
+        series.push({data: getObjValues(item.data), type: pageProps.type, name: item.name});
     }
+
 
     const tooltip = {
         show: true,
-            feature: {
+        feature: {
             dataZoom: {
                 yAxisIndex: 'none'
             },
@@ -41,35 +40,22 @@ const EnchartBuilder = ({children, ...pageProps}) => {
             magicType: { type: ['line', 'bar'] },
         }}
 
-    //
-    // useEffect(() => {
-    //     var myChart = echarts.init(document.getElementById('main'));
-    //     window.addEventListener('resize', function() {
-    //         myChart.resize();
-    //     });
-    //     myChart?.resize({
-    //         width: 1800,
-    //         height: 400
-    //     });
-    // })
 
 
     return (
         <ReactECharts option ={{
-            title: pageProps.title,
+            title: {
+                text: pageProps.title.text,
+                subtext: pageProps.title.subtext,
+                left: 'center'
+            },
             legend: {
-                data: legends
+                orient: 'vertical',
+                left: 'left'
             },
             toolbox: pageProps.mobileTooltip?{}:tooltip,
             tooltip: {
                 trigger: 'item',
-            },
-            xAxis: {
-                type: 'category',
-                data: Object.keys(children.datasets[0]?.data)
-            },
-            yAxis: {
-                type: 'value'
             },
             series: series
         }}
@@ -79,4 +65,4 @@ const EnchartBuilder = ({children, ...pageProps}) => {
     );
 };
 // {/*{{height: pageProps.height, width: pageProps.width}}*/}
-export default EnchartBuilder;
+export default LineBuilder;
