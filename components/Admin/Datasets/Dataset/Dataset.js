@@ -49,7 +49,6 @@ const Dataset = ({children}) => {
         }
         else{
             const id = searchParams.get('id')
-            console.log(sendMode)
             await $api.patch(`/terms/datasets/update`,
                 {sendMode: sendMode, name: name, raw: url || data, id: id}, {
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},

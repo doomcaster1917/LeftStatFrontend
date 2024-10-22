@@ -8,6 +8,7 @@ const LineBuilder = ({children, ...pageProps}) => {
 
     function getValues(obj){
         let arr = []
+
         for(let key in obj){
             arr.push(obj[key])
         }
@@ -21,7 +22,7 @@ const LineBuilder = ({children, ...pageProps}) => {
         }
 
 
-    console.log(series)
+
 
     const tooltip = {
         show: true,
@@ -46,7 +47,7 @@ const LineBuilder = ({children, ...pageProps}) => {
 
     return (
         <ReactECharts option ={{
-            title: pageProps.title.text,
+            title: pageProps.title,//.text,
             legend: {
                 data: legends
             },
