@@ -4,7 +4,6 @@ import axios from "axios";
 import ViewWrapper from "../../components/ViewWrapper/ViewWrapper";
 
 const ViewPage = ({Data}) => {
-    console.log(Data)
     return (
         <>
             <ViewWrapper>{Data}</ViewWrapper>

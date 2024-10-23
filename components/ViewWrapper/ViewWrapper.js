@@ -7,6 +7,15 @@ import ViewMB from "../../MobileComponents/ViewMB/ViewMB";
 import styles from "./ViewWrapper.module.scss";
 
 const ViewWrapper = ({children}) => {
+
+    function setViewPort(){
+        for(let item of children.BoundedCharts){
+            if(item.type === 'pie')
+                return 0.3
+        }
+        return 0.6
+    }
+
     return (
         <>
             <div className={styles.desktop}>
@@ -17,7 +26,7 @@ const ViewWrapper = ({children}) => {
                 </MainContainer>
             </div>
             <div className={styles.mobile}>
-                <MainContainerMB title={children.Name} description={children.SeoDescription}>
+                <MainContainerMB title={children.Name} viewport={setViewPort()} description={children.SeoDescription}>
                     <CentralBody>
                         <ViewMB>{children}</ViewMB>
                     </CentralBody>

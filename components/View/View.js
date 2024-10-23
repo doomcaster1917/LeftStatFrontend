@@ -5,7 +5,6 @@ import LineBuilder from "../EchnartBuilder/LineBuilder/LineBuilder";
 import PieBuilder from "../EchnartBuilder/PieBuilder/PieBuilder";
 
 const View = ({children}) => {
-    console.log(children);
     return (
         <div className={styles.main_wrapper}>
             <h1>{children.Title}</h1>
