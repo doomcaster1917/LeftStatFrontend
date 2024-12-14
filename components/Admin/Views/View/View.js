@@ -17,7 +17,7 @@ const View = ({children, ...pageProps}) => {
 
     async function HandleDataSubmit(e) {
         e.preventDefault();
-        await $api.patch(`${backendAddr}/terms/update_view`,
+        await $api.patch(`${backendAddr}/terms/views/update_by_id`,
             {
                 name: name,
                 title: title,
@@ -93,7 +93,7 @@ const View = ({children, ...pageProps}) => {
         if (!file){
             alert("Выберите файл")
         } else {
-            await axios.post(`${backendAddr}/terms/views/download_img`,
+            await $api.post(`${backendAddr}/terms/views/download_img/`,
                 formData, {
                     headers: {'Content-Type': 'multipart/form-data'},
                 })

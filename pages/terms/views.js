@@ -8,10 +8,10 @@ import backendAddr from "/config/config"
 
 const ViewsPage = () => {
     const fetcher = url => $api.get(url).then(res => res)
-    const { data, error } = useSWR(`${backendAddr}/terms/get_views`, fetcher)
+    const { data, error } = useSWR(`${backendAddr}/terms/views/get_views`, fetcher)
 
     if (data?.headers.get("Authorization") === "true") {
-        console.log(data.data)
+        console.log(data.data);
         return (
             <AdminPanel>
                 <Views>{data.data}</Views>

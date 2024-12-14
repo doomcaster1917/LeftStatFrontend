@@ -5,12 +5,13 @@ import $api from "../../../../api/axios";
 import backendAddr from "/config/config"
 
 const ViewsComponent = ({children}) => {
+    console.log(typeof children)
     const [name, setName] = useState('');
     const [title, setTitle] = useState('');
 
     async function sendValue(e){
         e.preventDefault();
-        await $api.post(`${backendAddr}/terms/views/create_view`,
+        await $api.post(`${backendAddr}/terms/views/create_view/`,
             {name: name, title: title}, {
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 withCredentials: true

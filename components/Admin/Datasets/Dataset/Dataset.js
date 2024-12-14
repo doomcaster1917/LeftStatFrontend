@@ -32,11 +32,10 @@ const Dataset = ({children}) => {
     }
 
     async function deleteDtSet(){
-        await $api.post(`/terms/datasets/delete`,
+        await $api.post(`/terms/datasets/delete_by_id`,
             {id: id}, {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
-                    'Access-Control-Request-Method': 'DELETE'
                 },
                 withCredentials: true
             })
@@ -49,7 +48,7 @@ const Dataset = ({children}) => {
         }
         else{
             const id = searchParams.get('id')
-            await $api.patch(`/terms/datasets/update`,
+            await $api.patch(`/terms/datasets/update_by_id`,
                 {sendMode: sendMode, name: name, raw: url || data, id: id}, {
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                     withCredentials: true

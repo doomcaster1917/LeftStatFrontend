@@ -9,7 +9,7 @@ const Datasets = ({children}) => {
 
     async function sendValue(e){
         e.preventDefault();
-        await $api.patch(`${backendAddr}/terms/datasets/create`,
+        await $api.post(`${backendAddr}/terms/datasets/create`,
             {name: name}, {
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 withCredentials: true

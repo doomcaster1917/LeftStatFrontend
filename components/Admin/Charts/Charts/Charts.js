@@ -10,7 +10,7 @@ const Charts = ({children}) => {
 
     async function sendValue(e){
         e.preventDefault();
-        await $api.patch(`${backendAddr}/terms/create_chart`,
+        await $api.post(`${backendAddr}/terms/create_chart`,
             {name: name, title: title}, {
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 withCredentials: true

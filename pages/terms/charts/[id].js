@@ -11,7 +11,7 @@ const ChartOnId = () => {
     const searchParams = useSearchParams()
     const id = searchParams.get('id')
     const fetcher = url => $api.get(url).then(res => res)
-    const { data, error } = useSWR(`${backendAddr}/terms/chart/?id=${id}`, fetcher)
+    const { data, error } = useSWR(`${backendAddr}/terms/charts/get_by_id/${id}`, fetcher)
 
     if (data?.headers.get("Authorization") === "true") {
         return (

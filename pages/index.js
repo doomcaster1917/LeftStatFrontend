@@ -3,6 +3,7 @@ import axios from "axios";
 import LayOut from "../components/LayOut/LayOut";
 
 const Index = ({views}) => {
+
     return (
         <LayOut>{views}</LayOut>
     );
