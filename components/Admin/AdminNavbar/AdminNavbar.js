@@ -8,6 +8,7 @@ const AdminNavbar = ({children}) => {
         <div className={styles.wrapper}>
             <div className={styles.navbar}>
                 <ul>
+                    <li><Link href={`/terms/groups`}>Groups</Link></li>
                     <li><Link href={`/terms/views`}>Views</Link></li>
                     <li><Link href={`/terms/charts`}>Charts</Link></li>
                     <li><Link href={`/terms/datasets`}>Datasets</Link></li>

@@ -26,8 +26,23 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://leftstat.ru/views/zarplati_v_rossii_i_amerike?id=6</loc>
+        <lastmod>2025-01-17T19:13:43+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://leftstat.ru/views/smerti_na_more?id=7</loc>
         <lastmod>2024-10-15T19:13:43+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://leftstat.ru/views/Pochemu_rabochii_class_samyi_bolshoy?id=8</loc>
+        <lastmod>2025-01-17T19:13:43+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://leftstat.ru/views/tsena_na_moloko_po_godam?id=9</loc>
+        <lastmod>2025-01-17T19:13:43+01:00</lastmod>
         <priority>1.0</priority>
     </url>
 </urlset>
